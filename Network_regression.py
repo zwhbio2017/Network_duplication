@@ -18,7 +18,7 @@ result.columns = ['connection'] + ['num_' + str(i + 1) for i in range(100)]
 
 data_1 = result[['connection', 'num_5']]
 data_1['logk'] = np.log(data_1['connection'])
-data_1['logPk'] = np.log(data_1['num_5'] / 1000)
+data_1['logPk'] = np.log(data_1['num_5'] / node_number)
 data_1 = data_1[(data_1['logk'] != -np.inf) & (data_1['logPk'] != -np.inf)]
 
 y = np.array(data_1['logPk']).reshape(-1, 1)
