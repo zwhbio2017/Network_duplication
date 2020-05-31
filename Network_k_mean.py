@@ -14,6 +14,6 @@ result.columns = ['connection_num'] + ['gene_num_' + str(i + 1) for i in range(1
 k_total = []
 
 for i in range(100):
-    k_total.append(sum(result['connection_num'] * result['gene_num_' + str(i + 1)]) / 1000)
+    k_total.append(sum(result['connection_num'] * result['gene_num_' + str(i + 1)]) / node_number)
 
-print('mean of K: ' + sum(k_total) / 100)
+print('mean of K: ' + str(sum(k_total) / 100))
